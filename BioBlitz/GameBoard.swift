@@ -64,6 +64,7 @@ class GameBoard: ObservableObject {
     private func infect(from: Bacteria) {
         objectWillChange.send()
         
+        // Direct
         var bacteriaToInfect = [Bacteria?]()
         switch from.direction {
         case .north:
@@ -74,6 +75,23 @@ class GameBoard: ObservableObject {
             bacteriaToInfect.append(getBacteria(atRow: from.row, column: from.column + 1))
         case .west:
             bacteriaToInfect.append(getBacteria(atRow: from.row, column: from.column - 1))
+        }
+        
+        // Indirect
+        if let indirectBacteria = getBacteria(atRow: from.row - 1, column: from.column), indirectBacteria.direction == .south {
+            bacteriaToInfect.append(indirectBacteria)
+        }
+        
+        if let indirectBacteria = getBacteria(atRow: from.row + 1, column: from.column), indirectBacteria.direction == .north {
+            bacteriaToInfect.append(indirectBacteria)
+        }
+        
+        if let indirectBacteria = getBacteria(atRow: from.row, column: from.column - 1), indirectBacteria.direction == .east {
+            bacteriaToInfect.append(indirectBacteria)
+        }
+        
+        if let indirectBacteria = getBacteria(atRow: from.row, column: from.column + 1), indirectBacteria.direction == .west {
+            bacteriaToInfect.append(indirectBacteria)
         }
         
         for case let bacteria? in bacteriaToInfect {
