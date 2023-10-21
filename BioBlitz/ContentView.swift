@@ -22,7 +22,10 @@ struct ContentView: View {
                 ForEach(0..<11, id: \.self) { row in
                     HStack {
                         ForEach(0..<22, id: \.self) { column in
-                            Text("X")
+                            let bacteria = Bacteria(row: 0, column: 0)
+                            BacteriaView(bacteria: bacteria) {
+                                
+                            }
                         }
                     }
                 }
