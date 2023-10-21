@@ -11,6 +11,7 @@
 		E4F0F9272AE3FD3B0092DE05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0F9262AE3FD3B0092DE05 /* ContentView.swift */; };
 		E4F0F9292AE3FD3D0092DE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F0F9282AE3FD3D0092DE05 /* Assets.xcassets */; };
 		E4F0F92C2AE3FD3D0092DE05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F0F92B2AE3FD3D0092DE05 /* Preview Assets.xcassets */; };
+		E4F0F9342AE400E60092DE05 /* Bacteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0F9332AE400E60092DE05 /* Bacteria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E4F0F9282AE3FD3D0092DE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F0F92B2AE3FD3D0092DE05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4F0F92D2AE3FD3D0092DE05 /* BioBlitz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BioBlitz.entitlements; sourceTree = "<group>"; };
+		E4F0F9332AE400E60092DE05 /* Bacteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bacteria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				E4F0F9242AE3FD3B0092DE05 /* BioBlitzApp.swift */,
 				E4F0F9262AE3FD3B0092DE05 /* ContentView.swift */,
+				E4F0F9332AE400E60092DE05 /* Bacteria.swift */,
 				E4F0F9282AE3FD3D0092DE05 /* Assets.xcassets */,
 				E4F0F92D2AE3FD3D0092DE05 /* BioBlitz.entitlements */,
 				E4F0F92A2AE3FD3D0092DE05 /* Preview Content */,
@@ -141,6 +144,7 @@
 			files = (
 				E4F0F9272AE3FD3B0092DE05 /* ContentView.swift in Sources */,
 				E4F0F9252AE3FD3B0092DE05 /* BioBlitzApp.swift in Sources */,
+				E4F0F9342AE400E60092DE05 /* Bacteria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
