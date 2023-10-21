@@ -97,7 +97,11 @@ class GameBoard: ObservableObject {
         for case let bacteria? in bacteriaToInfect {
             if bacteria.color != from.color {
                 bacteria.color = from.color
-                infect(from: bacteria)
+                
+                Task { @MainActor in 
+                    try await Task.sleep(for: .milliseconds(50))
+                    infect(from: bacteria)
+                }
             }
         }
     }
