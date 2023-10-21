@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var board = GameBoard()
     var body: some View {
         VStack {
             HStack {
@@ -22,7 +23,7 @@ struct ContentView: View {
                 ForEach(0..<11, id: \.self) { row in
                     HStack {
                         ForEach(0..<22, id: \.self) { column in
-                            let bacteria = Bacteria(row: 0, column: 0)
+                            let bacteria = board.grid[row][column]
                             BacteriaView(bacteria: bacteria) {
                                 
                             }
